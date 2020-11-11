@@ -12,7 +12,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                     if(error.status===401){
                         return throwError(error.statusText);
                     }
-                    const applicationError = error.headers.get('Application-Error');
+                    const applicationError =  error.headers.get('Application-Error');
                     if (applicationError) {
 
                         console.error(applicationError);
